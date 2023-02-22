@@ -57,7 +57,7 @@ describe('ListItem', () => {
             />
         );
 
-        const checkbox = getByTestId('list-item-1');
+        const checkbox = getByTestId('test-list-item-1');
         fireEvent.click(checkbox);
         expect(mockOnCheck).toHaveBeenCalled();
     });
@@ -73,7 +73,7 @@ describe('ListItem', () => {
             />
         );
 
-        const checkbox = getByTestId('list-item-1');
+        const checkbox = getByTestId('test-list-item-1');
         fireEvent.click(checkbox);
         expect(mockOnCheck).not.toHaveBeenCalled();
     });
