@@ -64,7 +64,7 @@ describe('ListItem', () => {
 
     //TODO: implement this
     it('callback is not called when not checkable', () => {
-        const { getByTestId } = render(
+        const { queryByTestId } = render(
             <ListItem
                 id='list-item-1'
                 checkable={false}
@@ -73,9 +73,7 @@ describe('ListItem', () => {
             />
         );
 
-        const checkbox = getByTestId('test-list-item-1');
-        fireEvent.click(checkbox);
-        expect(mockOnCheck).not.toHaveBeenCalled();
+        expect(queryByTestId('test-list-item-1')).toBeNull();
     });
 
     //TODO: implement this
